@@ -9,66 +9,62 @@
     tools:context=".Login"
     android:background="@drawable/gradient">
 
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_start"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.15" />
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintGuide_percent="0.24"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@+id/cereza" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_end"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.85" />
-
+        app:layout_constraintGuide_percent="0.77" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_top"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.12" />
+        app:layout_constraintGuide_begin="63dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_bottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.75" />
 
     <ImageView
-        android:id="@+id/estrellas"
+        android:id="@+id/cereza"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:src="@drawable/ic_action_name"
-        app:layout_constraintTop_toTopOf="@id/guideline_top"
-        app:layout_constraintStart_toStartOf="@id/guideline_start"
-        app:layout_constraintEnd_toEndOf="@id/guideline_end"
         app:layout_constraintBottom_toTopOf="@+id/tilUser"
-        app:layout_constraintVertical_chainStyle="packed"
-        app:layout_constraintHorizontal_bias="0.5" />
-
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toTopOf="@id/guideline_top"
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilUser"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="#80FFFFFF"
         android:layout_marginTop="16dp"
+        android:hint="Username"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         app:startIconDrawable="@drawable/baseline_emoji_people_24"
-        app:layout_constraintTop_toBottomOf="@+id/estrellas"
+        app:layout_constraintTop_toBottomOf="@+id/cereza"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
         app:layout_constraintEnd_toEndOf="@id/guideline_end">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/user"
+            android:id="@+id/etUser"
             android:layout_width="match_parent"
+            android:paddingStart="48dp"
             android:layout_height="wrap_content"
-            android:hint="Username"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"/>
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -76,49 +72,54 @@
         android:id="@+id/tilPass"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="#80FFFFFF"
         android:layout_marginTop="12dp"
-        app:endIconMode="password_toggle"
-        app:layout_constraintEnd_toEndOf="@id/guideline_end"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        android:hint="Password"
+        app:startIconDrawable="@drawable/baseline_vpn_key_24"
         app:layout_constraintTop_toBottomOf="@+id/tilUser"
-        app:startIconDrawable="@drawable/baseline_vpn_key_24">
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/password"
-            android:layout_width="wrap_content"
+            android:id="@+id/etPass"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:paddingStart="48dp"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/login"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/button_custom"
         android:text="LOGIN"
-        android:layout_marginTop="24dp"
-        android:textColor="@color/black"
-        android:backgroundTint="@color/white"
-        app:layout_constraintTop_toBottomOf="@+id/tilPass"
+        android:onClick="OpenMain"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/tilPass"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
-        app:layout_constraintEnd_toEndOf="@id/guideline_end" />
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintHorizontal_bias="0.0"
+        />
 
     <Button
         android:id="@+id/signup"
-        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        style="@style/buttonoutlined"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="@color/white"
+        android:layout_height="60dp"
+        android:backgroundTint="@android:color/transparent"
         android:text="SIGN UP"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"
-        app:layout_constraintEnd_toEndOf="@id/guideline_end"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        android:strokeColor="@color/verdeOscuro"
         app:layout_constraintTop_toBottomOf="@id/login"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
