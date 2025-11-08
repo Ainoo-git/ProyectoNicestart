@@ -5,7 +5,9 @@ This repository will be used during the different activities that I will be guid
 
 ## Screenshot
 
-<img width="334" height="710" alt="image" src="https://github.com/user-attachments/assets/a01600c2-d30d-42a5-a1c0-f2575d6055dc" />
+
+<img width="288" height="561" alt="image" src="https://github.com/user-attachments/assets/d9c6cfd6-c7be-42f8-a439-85224d2399c0" />
+
 
 ## License
 
