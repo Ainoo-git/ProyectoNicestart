@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # NiceStart App Guide
 
 This is an introduction to awesome Interfaces you wanna cry.  
@@ -13,3 +14,7 @@ This repository will be used during the different activities that I will be guid
 
 This repository is licensed under [Creative Commons Org Licenses BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 
+=======
+This **repository** will be used during the different activities that I will be guiding you through.
+!
+>>>>>>> branch_local_completo

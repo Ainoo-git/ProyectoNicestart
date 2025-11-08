@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+<<<<<<< HEAD
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/signup_layout"
     android:layout_width="match_parent"
@@ -34,35 +35,91 @@
         app:layout_constraintBottom_toBottomOf="@id/back_arrow"
         app:layout_constraintStart_toEndOf="@id/back_arrow" />
 
+=======
+    android:id="@+id/signup_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/outline_arrow_back_ios_24"
+            android:contentDescription="Volver atrás"
+            android:onClick="OpenLogin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NiceStart"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@id/back_arrow"
+            app:layout_constraintTop_toTopOf="@id/back_arrow"
+            app:layout_constraintBottom_toBottomOf="@id/back_arrow"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+>>>>>>> branch_local_completo
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_start"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+<<<<<<< HEAD
         app:layout_constraintGuide_percent="0.28" />
+=======
+        app:layout_constraintGuide_percent="0.28"/>
+>>>>>>> branch_local_completo
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_end"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+<<<<<<< HEAD
         app:layout_constraintGuide_percent="0.77" />
+=======
+        app:layout_constraintGuide_percent="0.77"/>
+>>>>>>> branch_local_completo
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_top"
         android:orientation="horizontal"
+<<<<<<< HEAD
         app:layout_constraintGuide_begin="83dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+=======
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintGuide_begin="83dp"/>
+>>>>>>> branch_local_completo
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_bottom"
         android:orientation="horizontal"
+<<<<<<< HEAD
         app:layout_constraintGuide_percent="0.9"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
+=======
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintGuide_percent="0.9"/>
+>>>>>>> branch_local_completo
 
     <ImageView
         android:id="@+id/icon_signup"
@@ -72,8 +129,12 @@
         app:layout_constraintTop_toTopOf="@id/guideline_top"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
         app:layout_constraintEnd_toEndOf="@id/guideline_end"
+<<<<<<< HEAD
         app:layout_constraintHorizontal_bias="0.5" />
 
+=======
+        app:layout_constraintHorizontal_bias="0.5"/>
+>>>>>>> branch_local_completo
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilUsername"
@@ -121,7 +182,10 @@
             android:textColorHint="@color/black"/>
     </com.google.android.material.textfield.TextInputLayout>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> branch_local_completo
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilEmail"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -151,6 +215,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="16dp"
         android:backgroundTint="@color/button_custom"
+<<<<<<< HEAD
         android:onClick="SignLogin"
         android:text="CREATE ACCOUNT"
         android:textColor="@color/white"
@@ -169,11 +234,34 @@
         android:onClick="SignLogin"
         android:strokeColor="@color/verdeOscuro"
         android:text="CANCEL"
+=======
+        android:text="CREATE ACCOUNT"
+        android:textColor="@color/black"
+        android:onClick="OpenLogin"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/tilEmail"/>
+
+    <Button
+        android:id="@+id/btnGoToLogin"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:onClick="OpenLogin"
+        android:strokeColor="@color/verdeOscuro"
+        android:text="LOGIN"
+        android:textColor="@color/verdeOscuro"
+>>>>>>> branch_local_completo
         app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"
         app:layout_constraintEnd_toEndOf="@id/guideline_end"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
         app:layout_constraintTop_toBottomOf="@id/btnRegister"
+<<<<<<< HEAD
         app:layout_constraintVertical_bias="0.031" />
 
+=======
+        app:layout_constraintVertical_bias="0.133" />
+>>>>>>> branch_local_completo
 </androidx.constraintlayout.widget.ConstraintLayout>

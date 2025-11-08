@@ -2,6 +2,7 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.NiceStart.NoActionBar" parent="Theme.Material3.DayNight.NoActionBar">
     </style>
+<<<<<<< HEAD
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="verde">#F2D0D5</color>
@@ -10,4 +11,6 @@
     <color name="verde2">#EFECDE</color>
     <color name="verdeOscuro">#C3CBC0</color>
 
+=======
+>>>>>>> branch_local_completo
 </resources>
