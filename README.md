@@ -8,8 +8,7 @@ Su objetivo es mostrar una interfaz moderna de **login y registro**, con pantall
 ## Descripción de los layouts e imágenes
 
 ### 1. Pantalla Principal
-![Login Screen](https://github.com/user-attachments/assets/4c1a0c97-ca20-4832-9f93-29e424f6f17d)
-
+<img width="247" height="444" alt="image" src="https://github.com/user-attachments/assets/b4ec3b24-182c-4a15-a380-3e6aaea2e173" />
 **Funcionalidad:**  
 - Se muestra al abrir la aplicación.  
 - Contiene el **logotipo** de la app y el nombre **NiceStart**.  
