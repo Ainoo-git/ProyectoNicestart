@@ -27,7 +27,7 @@ Su objetivo es mostrar una interfaz moderna de **login y registro**, con pantall
 ---
 
 ### 2. Pantalla de Registro (Signup)
-![Signup Screen](https://github.com/user-attachments/assets/83d3fd0a-d025-4e07-93f7-d9603e5f756e)
+<img width="305" height="533" alt="image" src="https://github.com/user-attachments/assets/c7bd0993-65fc-4a9e-8aab-f3073e97bc30" />
 
 **Funcionalidad:**  
 - Permite al usuario crear una nueva cuenta ingresando datos como nombre, correo y contraseña.  
