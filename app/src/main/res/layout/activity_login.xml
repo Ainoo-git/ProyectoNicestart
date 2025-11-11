@@ -11,18 +11,30 @@
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_start"
+<<<<<<< HEAD
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+=======
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+>>>>>>> 77a781ad06cebdad258eb0ae46aced1c284ff1d8
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.28" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_end"
+<<<<<<< HEAD
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.77" />
 
+=======
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.77"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"/>
+>>>>>>> 77a781ad06cebdad258eb0ae46aced1c284ff1d8
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_top"
@@ -33,10 +45,17 @@
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_bottom"
+<<<<<<< HEAD
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.9" />
+=======
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"/>
+>>>>>>> 77a781ad06cebdad258eb0ae46aced1c284ff1d8
 
     <ImageView
         android:id="@+id/cereza"
@@ -52,20 +71,34 @@
         android:id="@+id/tilUser"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_marginTop="16dp"
         android:hint="Username"
         android:background="#80FFFFFF"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         app:startIconDrawable="@drawable/baseline_emoji_people_24"
         app:layout_constraintTop_toBottomOf="@id/cereza"
+=======
+        android:background="#80FFFFFF"
+        android:layout_marginTop="16dp"
+        android:hint="Username"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:startIconDrawable="@drawable/baseline_emoji_people_24"
+        app:layout_constraintTop_toBottomOf="@+id/cereza"
+>>>>>>> 77a781ad06cebdad258eb0ae46aced1c284ff1d8
         app:layout_constraintStart_toStartOf="@id/guideline_start"
         app:layout_constraintEnd_toEndOf="@id/guideline_end">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etUser"
             android:layout_width="match_parent"
+<<<<<<< HEAD
             android:layout_height="wrap_content"
             android:paddingStart="48dp"
+=======
+            android:paddingStart="48dp"
+            android:layout_height="wrap_content"
+>>>>>>> 77a781ad06cebdad258eb0ae46aced1c284ff1d8
             android:inputType="textPersonName"
             android:textColorHint="@color/black"
             android:textColor="@color/black"/>
@@ -75,12 +108,21 @@
         android:id="@+id/tilPass"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_marginTop="12dp"
         android:hint="Password"
         android:background="#80FFFFFF"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         app:startIconDrawable="@drawable/baseline_vpn_key_24"
         app:layout_constraintTop_toBottomOf="@id/tilUser"
+=======
+        android:background="#80FFFFFF"
+        android:layout_marginTop="12dp"
+        android:hint="Password"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:startIconDrawable="@drawable/baseline_vpn_key_24"
+        app:layout_constraintTop_toBottomOf="@+id/tilUser"
+>>>>>>> 77a781ad06cebdad258eb0ae46aced1c284ff1d8
         app:layout_constraintStart_toStartOf="@id/guideline_start"
         app:layout_constraintEnd_toEndOf="@id/guideline_end">
 
@@ -88,8 +130,13 @@
             android:id="@+id/etPass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
             android:paddingStart="48dp"
             android:inputType="textPassword"
+=======
+            android:inputType="textPassword"
+            android:paddingStart="48dp"
+>>>>>>> 77a781ad06cebdad258eb0ae46aced1c284ff1d8
             android:textColorHint="@color/black"
             android:textColor="@color/black"/>
     </com.google.android.material.textfield.TextInputLayout>
@@ -102,15 +149,21 @@
         android:layout_marginTop="16dp"
         android:backgroundTint="@color/button_custom"
         android:text="LOGIN"
+<<<<<<< HEAD
         android:textColor="@color/black"
         android:onClick="SignLogin"
         android:backgroundTintMode="@color/white"
+=======
+        android:onClick="OpenMain"
+        android:textColor="@color/white"
+>>>>>>> 77a781ad06cebdad258eb0ae46aced1c284ff1d8
         app:layout_constraintTop_toBottomOf="@id/tilPass"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
         app:layout_constraintEnd_toEndOf="@id/guideline_end" />
 
     <Button
         android:id="@+id/signup"
+<<<<<<< HEAD
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:layout_width="0dp"
         android:layout_height="60dp"
@@ -120,10 +173,23 @@
         android:strokeColor="@color/verdeOscuro"
         android:text="SIGN UP"
         android:textColor="@color/verdeOscuro"
+=======
+        style="@style/buttonoutlined"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@android:color/transparent"
+        android:strokeColor="@color/verdeOscuro"
+        android:text="SIGN UP"
+>>>>>>> 77a781ad06cebdad258eb0ae46aced1c284ff1d8
         app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"
         app:layout_constraintEnd_toEndOf="@id/guideline_end"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
         app:layout_constraintTop_toBottomOf="@id/login"
+<<<<<<< HEAD
         app:layout_constraintVertical_bias="0.09" />
+=======
+        app:layout_constraintVertical_bias="0.0" />
+
+>>>>>>> 77a781ad06cebdad258eb0ae46aced1c284ff1d8
 </androidx.constraintlayout.widget.ConstraintLayout>

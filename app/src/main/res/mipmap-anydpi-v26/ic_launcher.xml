@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+<<<<<<< HEAD
     <background android:drawable="@drawable/gradient"/>
     <foreground android:drawable="@drawable/ic_action_name"/>
 </adaptive-icon>
+=======
+    <background android:drawable="@drawable/ic_launcher_background" />
+    <foreground android:drawable="@drawable/ic_launcher_foreground" />
+    <monochrome android:drawable="@drawable/ic_launcher_foreground" />
+</adaptive-icon>
+>>>>>>> 77a781ad06cebdad258eb0ae46aced1c284ff1d8
