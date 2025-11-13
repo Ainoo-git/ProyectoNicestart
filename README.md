@@ -47,5 +47,8 @@ Su objetivo es mostrar una interfaz moderna de **login y registro**, con pantall
  - Mantiene coherencia visual con los colores y estilo de la interfaz.
 ---
 
+
+<img width="270" height="482" alt="image" src="https://github.com/user-attachments/assets/9b06ca0e-9596-4626-a5de-20512a3ac5a0" />
+
 Este proyecto está bajo la licencia [Creative Commons BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 
