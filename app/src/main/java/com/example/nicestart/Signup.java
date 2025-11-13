@@ -3,7 +3,6 @@ package com.example.nicestart;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import com.example.nicestart.R;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,9 +16,7 @@ public class Signup extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().hide();
-        }
+        if (getSupportActionBar() != null) getSupportActionBar().hide();
         setContentView(R.layout.activity_signup);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.signup_layout), (v, insets) -> {
@@ -27,7 +24,6 @@ public class Signup extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
     }
 
     public void OpenLogin(View view) {
@@ -36,7 +32,6 @@ public class Signup extends AppCompatActivity {
     }
 
     public void openMain(View v) {
-        Intent intent = new Intent(Signup.this, MainActivity.class);
-        startActivity(intent);
+        startActivity(new Intent(Signup.this, MainActivity.class));
     }
 }

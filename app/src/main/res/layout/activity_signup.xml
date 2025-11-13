@@ -166,7 +166,7 @@
         android:onClick="OpenLogin"
         android:strokeColor="@color/verdeOscuro"
         android:text="LOGIN"
-        android:textColor="@color/verdeOscuro"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"
         app:layout_constraintEnd_toEndOf="@id/guideline_end"
         app:layout_constraintHorizontal_bias="0.0"
