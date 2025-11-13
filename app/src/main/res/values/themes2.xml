@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.NiceStart.NoActionBar" parent="Theme.Material3.DayNight.NoActionBar">
+    </style>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="verde">#F2D0D5</color>
+    <color name="rosita">#582E54</color>
+    <color name="verdecitoAzulado">#DA93A7</color>
+    <color name="verde2">#EFECDE</color>
+    <color name="verdeOscuro">#C3CBC0</color>
+
+</resources>
