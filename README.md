@@ -45,10 +45,16 @@ Su objetivo es mostrar una interfaz moderna de **login y registro**, con pantall
 
 **Funcionalidad:**  
  - Mantiene coherencia visual con los colores y estilo de la interfaz.
+   
 ---
+### 5. Perfil del usuario 
+<img width="272" height="486" alt="image" src="https://github.com/user-attachments/assets/680d08b4-7aea-4a6b-9f51-3964e444b5dc" />
 
 
-<img width="270" height="482" alt="image" src="https://github.com/user-attachments/assets/9b06ca0e-9596-4626-a5de-20512a3ac5a0" />
+**Funcionalidad:**  
+ - Esta imagen representa el perfil del usuario dentro de la aplicación.
+ - Se puede utilizar como foto de cuenta o avatar personal, permitiendo identificar al usuario de forma visual.
+ - En futuras versiones, podría vincularse con la cuenta creada en el registro y mostrarse en la pantalla principal o en el área de perfil.
 
 Este proyecto está bajo la licencia [Creative Commons BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 
