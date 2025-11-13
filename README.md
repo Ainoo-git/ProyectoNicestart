@@ -8,7 +8,8 @@ Su objetivo es mostrar una interfaz moderna de **login y registro**, con pantall
 ## Descripción de los layouts e imágenes
 
 ### 1. Pantalla Principal
-<img width="334" height="590" alt="image" src="https://github.com/user-attachments/assets/e9b2eb16-96d4-4253-8d4f-74476c3b0ad0" />
+<img width="328" height="593" alt="image" src="https://github.com/user-attachments/assets/e3e629ba-e597-4ea9-8f48-e42587b59fbc" />
+
 
 
 **Funcionalidad:**  
