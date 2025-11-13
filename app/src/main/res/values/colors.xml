@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="teal_200">pink</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <color name="verdecitoAzulado">#20C997</color>
+    <color name="rosita">#FFC0CB</color>
+    <color name="teal_200">#FFC0CB</color>
+    <color name="verdeOscuro">#006400</color>
 </resources>

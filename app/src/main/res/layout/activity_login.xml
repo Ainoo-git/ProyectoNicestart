@@ -41,6 +41,7 @@
         android:id="@+id/cereza"
         android:layout_width="80dp"
         android:layout_height="80dp"
+        android:scaleType="centerCrop"
         android:src="@drawable/ic_action_name"
         app:layout_constraintTop_toTopOf="@id/guideline_top"
         app:layout_constraintStart_toStartOf="@id/guideline_start"

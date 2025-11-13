@@ -33,7 +33,7 @@ public class Principal extends AppCompatActivity {
                 .centerCrop()
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .placeholder(new ColorDrawable(this.getResources().getColor(R.color.teal_200)))
-//                .circleCrop()
+                .circleCrop()
                 .into(mSea);
 
     }
