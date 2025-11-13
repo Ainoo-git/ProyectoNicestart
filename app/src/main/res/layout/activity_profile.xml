@@ -24,23 +24,25 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="302dp"
+        android:layout_height="486dp"
         android:layout_gravity="top|center_horizontal"
         android:layout_marginTop="100dp"
         android:clipChildren="false"
         android:clipToPadding="false">
+
         <View
             android:layout_width="140dp"
             android:layout_height="140dp"
-            android:background="@drawable/circle_background"
-            android:layout_gravity="center" />
+            android:layout_gravity="center_horizontal|top"
+            android:background="@drawable/circle_background" />
 
         <ImageView
             android:id="@+id/profile_image"
             android:layout_width="120dp"
             android:layout_height="120dp"
-            android:layout_gravity="center"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_marginTop="10dp"
             android:clipToOutline="true"
             android:scaleType="centerCrop"
             android:src="@drawable/baseline_person_24" />
@@ -49,12 +51,23 @@
             android:id="@+id/nombre2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal|bottom"
-            android:layout_marginTop="150dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="180dp"
+            android:gravity="center"
             android:text="Nombre"
-            android:textSize="18sp"
             android:textColor="@color/black"
-            android:gravity="center" />
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/descripcion"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="230dp"
+            android:gravity="center"
+            android:text="@string/descripcion"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
 
     </FrameLayout>
 
