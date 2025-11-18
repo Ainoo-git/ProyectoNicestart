@@ -21,9 +21,10 @@ public class Principal extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.principal);
         ImageView background = findViewById(R.id.backView);
+
         ImageView logo = findViewById(R.id.logosplash);
 
-        Animation fadeIn = AnimationUtils.loadAnimation(this, R.anim.fade_in);
+        Animation fadeIn = AnimationUtils.loadAnimation(this, R.anim.set);
         logo.startAnimation(fadeIn);
 
         Glide.with(this)
