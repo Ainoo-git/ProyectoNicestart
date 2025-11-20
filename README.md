@@ -18,7 +18,7 @@ Su objetivo es mostrar una interfaz moderna de **login y registro**, con pantall
 - Diseñada para dar una primera impresión profesional mientras carga la app.
 
 ### 2. Pantalla Login
-<img width="300" height="540" alt="image" src="https://github.com/user-attachments/assets/04f71fb0-3f2c-46cb-b325-cab4d43064e9" />
+<img width="248" height="475" alt="image" src="https://github.com/user-attachments/assets/65d939aa-a20c-40e1-83cc-8d25573a4059" />
 
 
 **Funcionalidad:**  
@@ -30,7 +30,7 @@ Su objetivo es mostrar una interfaz moderna de **login y registro**, con pantall
 ---
 
 ### 2. Pantalla de Registro (Signup)
-<img width="271" height="487" alt="image" src="https://github.com/user-attachments/assets/22e0b372-12da-478a-9e67-7590930395cf" />
+<img width="244" height="476" alt="image" src="https://github.com/user-attachments/assets/c13bbf98-ee7f-4587-92e3-22dbe873d026" />
 
 
 **Funcionalidad:**  
