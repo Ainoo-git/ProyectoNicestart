@@ -57,14 +57,14 @@ Su objetivo es mostrar una interfaz moderna de **login y registro**, con pantall
 
 ---
 ### 7.Barra de Aplicación
-<img width="246" height="480" alt="image" src="https://github.com/user-attachments/assets/bc7d0c53-89d1-4978-b542-a813fd217331" />
 <img width="244" height="477" alt="image" src="https://github.com/user-attachments/assets/1c48d988-50f6-46db-b443-463369b42df6" />
+<img width="246" height="480" alt="image" src="https://github.com/user-attachments/assets/bc7d0c53-89d1-4978-b542-a813fd217331" />
 
 
 **Funcionalidad:**
  - Este menú representa la navegación principal de la aplicación.
  - Permite acceder rápidamente a las secciones clave como Bottom app bar, Bottom navigation y Signout.
  - Proporciona una experiencia de usuario fluida mediante transiciones entre pantallas.
- - 
+   
 Este proyecto está bajo la licencia [Creative Commons BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 
