@@ -28,8 +28,8 @@ Su objetivo es mostrar una interfaz moderna de **login y registro**, con pantall
 
 ---
 
-### 2. Pantalla de Registro (Signup)
-<img width="244" height="476" alt="image" src="https://github.com/user-attachments/assets/c13bbf98-ee7f-4587-92e3-22dbe873d026" />
+### 3. Pantalla de Registro (Signup)
+<img width="312" height="603" alt="image" src="https://github.com/user-attachments/assets/90550a50-6d60-4c60-9a9d-ca0d76652710" />
 
 
 **Funcionalidad:**  
