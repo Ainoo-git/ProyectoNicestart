@@ -58,7 +58,7 @@ Su objetivo es mostrar una interfaz moderna de **login y registro**, con pantall
 ---
 ### 7.Barra de Aplicación
 <img width="244" height="477" alt="image" src="https://github.com/user-attachments/assets/1c48d988-50f6-46db-b443-463369b42df6" />
-<img width="246" height="480" alt="image" src="https://github.com/user-attachments/assets/bc7d0c53-89d1-4978-b542-a813fd217331" />
+<img width="363" height="634" alt="image" src="https://github.com/user-attachments/assets/05916a91-80ea-492c-ba70-3db84aa35f4a" />
 
 
 **Funcionalidad:**
