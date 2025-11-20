@@ -11,7 +11,6 @@ Su objetivo es mostrar una interfaz moderna de **login y registro**, con pantall
 <img width="328" height="593" alt="image" src="https://github.com/user-attachments/assets/e3e629ba-e597-4ea9-8f48-e42587b59fbc" />
 
 
-
 **Funcionalidad:**  
 - Se muestra al abrir la aplicación.  
 - Contiene el **logotipo** de la app y el nombre **NiceStart**.  
@@ -63,9 +62,9 @@ Su objetivo es mostrar una interfaz moderna de **login y registro**, con pantall
 
 
 **Funcionalidad:**
- -Este menú representa la navegación principal de la aplicación.
- -Permite acceder rápidamente a las secciones clave como Bottom app bar, Bottom navigation y       Signout.
- -Proporciona una experiencia de usuario fluida mediante transiciones entre pantallas.
-
+ - Este menú representa la navegación principal de la aplicación.
+ - Permite acceder rápidamente a las secciones clave como Bottom app bar, Bottom navigation y Signout.
+ - Proporciona una experiencia de usuario fluida mediante transiciones entre pantallas.
+ - 
 Este proyecto está bajo la licencia [Creative Commons BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 
