@@ -34,7 +34,7 @@ private SwipeRefreshLayout swipeLayout;
             Toast toast2 = Toast.makeText(this, "ITEM DOWLOADING ITEM", Toast.LENGTH_LONG);
             toast2.show();
         }
-        return false;
+        return true;
     }
 
     @Override

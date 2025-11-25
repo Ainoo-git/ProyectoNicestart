@@ -150,12 +150,13 @@
         android:layout_height="60dp"
         android:layout_marginTop="16dp"
         android:backgroundTint="@color/button_custom"
+        android:onClick="OpenLogin"
         android:text="CREATE ACCOUNT"
         android:textColor="@color/black"
-        android:onClick="OpenLogin"
         app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
-        app:layout_constraintTop_toBottomOf="@id/tilEmail"/>
+        app:layout_constraintTop_toBottomOf="@id/tilEmail" />
 
     <Button
         android:id="@+id/btnGoToLogin"
@@ -172,5 +173,5 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
         app:layout_constraintTop_toBottomOf="@id/btnRegister"
-        app:layout_constraintVertical_bias="0.133" />
+        app:layout_constraintVertical_bias="0.07" />
 </androidx.constraintlayout.widget.ConstraintLayout>
