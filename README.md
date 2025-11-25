@@ -72,11 +72,12 @@ https://github.com/user-attachments/assets/d140ca96-5fbd-4206-80ee-f50cc4f00f68
 
 
 **Funcionalidad:**
- -Muestra el logotipo de NiceStart animado al abrir la app, funcionando como parte de la pantalla de splash.
- -La animación está hecha con Lottie y se reproduce automáticamente al iniciar la aplicación.
- -El archivo de animación se encuentra en res/raw/icono.json.
- -Se integra mediante un LottieAnimationView, permitiendo controlar reproducción, bucle y velocidad desde el código si se desea.
+ - Muestra el logotipo de NiceStart animado al abrir la app, funcionando como parte de la pantalla de splash.
+ - La animación está hecha con Lottie y se reproduce automáticamente al iniciar la aplicación.
+ - El archivo de animación se encuentra en res/raw/icono.json.
+ - Se integra mediante un LottieAnimationView, permitiendo controlar reproducción, bucle y velocidad desde el código si se desea.
  -Aporta una experiencia visual más moderna y profesional, haciendo que el inicio de la app sea dinámico y atractivo
+ - Se integra mediante un LottieAnimationView, permitiendo controlar reproducción, bucle y velocidad desde el código si se desea.
  -Se encuentra en la rama RamaLottie.
   
  --- 
