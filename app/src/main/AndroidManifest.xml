@@ -21,16 +21,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Principal"
-            android:exported="true"
-            android:theme="@style/Theme.NiceStart">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".Principal"
+            android:name=".Profile"
             android:exported="true"
             android:theme="@style/Theme.NiceStart">
             <intent-filter>
