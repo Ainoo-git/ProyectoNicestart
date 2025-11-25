@@ -19,11 +19,6 @@ public class Principal extends AppCompatActivity {
         setContentView(R.layout.principal);
 
 
-        ImageView logo = findViewById(R.id.logosplash);
-        Animation fadeIn = AnimationUtils.loadAnimation(this, R.anim.set);
-        logo.startAnimation(fadeIn);
-
-
         LottieAnimationView lottie = findViewById(R.id.lottieBackground);
         lottie.playAnimation();
 
