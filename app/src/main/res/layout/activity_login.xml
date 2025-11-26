@@ -57,6 +57,8 @@
         android:background="#80FFFFFF"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         app:startIconDrawable="@drawable/baseline_emoji_people_24"
+        app:boxStrokeColor="@android:color/transparent"
+        app:boxStrokeWidth="0dp"
         app:layout_constraintTop_toBottomOf="@id/cereza"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
         app:layout_constraintEnd_toEndOf="@id/guideline_end">
@@ -71,6 +73,7 @@
             android:textColor="@color/black"/>
     </com.google.android.material.textfield.TextInputLayout>
 
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilPass"
         android:layout_width="0dp"
@@ -80,6 +83,8 @@
         android:background="#80FFFFFF"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         app:startIconDrawable="@drawable/baseline_vpn_key_24"
+        app:boxStrokeColor="@android:color/transparent"
+        app:boxStrokeWidth="0dp"
         app:layout_constraintTop_toBottomOf="@id/tilUser"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
         app:layout_constraintEnd_toEndOf="@id/guideline_end">
@@ -94,6 +99,7 @@
             android:textColor="@color/black"/>
     </com.google.android.material.textfield.TextInputLayout>
 
+
     <Button
         android:id="@+id/login"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
@@ -101,13 +107,14 @@
         android:layout_height="60dp"
         android:layout_marginTop="16dp"
         android:backgroundTint="@color/button_custom"
+        android:backgroundTintMode="@color/white"
+        android:onClick="SignLogin"
         android:text="LOGIN"
         android:textColor="@color/black"
-        android:onClick="SignLogin"
-        android:backgroundTintMode="@color/white"
-        app:layout_constraintTop_toBottomOf="@id/tilPass"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
-        app:layout_constraintEnd_toEndOf="@id/guideline_end" />
+        app:layout_constraintTop_toBottomOf="@id/tilPass" />
 
     <Button
         android:id="@+id/signup"

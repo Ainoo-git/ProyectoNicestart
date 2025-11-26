@@ -20,6 +20,7 @@ public class Principal extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.principal);
+        f (getSupportActionBar() != null) getSupportActionBar().hide(); // para ocultar la barra de arriba
         ImageView background = findViewById(R.id.backView);
 
         ImageView logo = findViewById(R.id.logosplash);

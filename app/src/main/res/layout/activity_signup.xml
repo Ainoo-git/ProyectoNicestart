@@ -2,16 +2,17 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/signup_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient">
-
+    <!-- CONTENEDOR SUPERIOR: flecha + nombre app -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp">
-
+        <!-- Flecha volver -->
         <ImageView
             android:id="@+id/back_arrow"
             android:layout_width="28dp"
@@ -22,7 +23,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
-
+        <!-- Nombre de la app -->
         <TextView
             android:id="@+id/app_name"
             android:layout_width="wrap_content"
@@ -39,16 +40,16 @@
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_start"
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.24" />
+        app:layout_constraintGuide_percent="0.24"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_end"
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         app:layout_constraintGuide_percent="0.77"/>
 
     <androidx.constraintlayout.widget.Guideline
@@ -75,6 +76,7 @@
         app:layout_constraintEnd_toEndOf="@id/guideline_end"
         app:layout_constraintHorizontal_bias="0.5"/>
 
+    <!-- USERNAME -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilUsername"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -84,6 +86,8 @@
         android:background="#80FFFFFF"
         android:hint="Username"
         app:startIconDrawable="@drawable/baseline_emoji_people_24"
+        app:boxStrokeColor="@android:color/transparent"
+        app:boxStrokeWidth="0dp"
         app:layout_constraintTop_toBottomOf="@id/icon_signup"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
         app:layout_constraintEnd_toEndOf="@id/guideline_end">
@@ -98,6 +102,7 @@
             android:textColorHint="@color/black"/>
     </com.google.android.material.textfield.TextInputLayout>
 
+    <!-- PASSWORD -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilPassword"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -107,6 +112,8 @@
         android:background="#80FFFFFF"
         android:hint="Password"
         app:startIconDrawable="@drawable/baseline_vpn_key_24"
+        app:boxStrokeColor="@android:color/transparent"
+        app:boxStrokeWidth="0dp"
         app:layout_constraintTop_toBottomOf="@id/tilUsername"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
         app:layout_constraintEnd_toEndOf="@id/guideline_end">
@@ -121,6 +128,7 @@
             android:textColorHint="@color/black"/>
     </com.google.android.material.textfield.TextInputLayout>
 
+    <!-- EMAIL -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilEmail"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -129,10 +137,12 @@
         android:layout_marginTop="12dp"
         android:background="#80FFFFFF"
         android:hint="Email"
+        app:boxStrokeColor="@android:color/transparent"
+        app:boxStrokeWidth="0dp"
         app:layout_constraintTop_toBottomOf="@id/tilPassword"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
         app:layout_constraintEnd_toEndOf="@id/guideline_end">
-
+        <!-- EditText password -->
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etEmail"
             android:layout_width="match_parent"
@@ -146,22 +156,22 @@
     <Button
         android:id="@+id/btnRegister"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
+        android:layout_width="217dp"
+        android:layout_height="65dp"
         android:layout_marginTop="16dp"
         android:backgroundTint="@color/button_custom"
+        android:onClick="OpenLogin"
         android:text="CREATE ACCOUNT"
         android:textColor="@color/black"
-        android:onClick="OpenLogin"
         app:layout_constraintEnd_toEndOf="@id/guideline_end"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
-        app:layout_constraintTop_toBottomOf="@id/tilEmail"/>
+        app:layout_constraintTop_toBottomOf="@id/tilEmail" />
 
     <Button
         android:id="@+id/btnGoToLogin"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
+        android:layout_width="220dp"
+        android:layout_height="69dp"
         android:layout_marginTop="8dp"
         android:onClick="OpenLogin"
         android:strokeColor="@color/verdeOscuro"

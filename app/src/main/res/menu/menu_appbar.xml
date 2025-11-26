@@ -5,13 +5,17 @@
     <item
         android:id="@+id/mySetting"
         android:title="Settings"
-        app:showAsAction="never" />
+        app:showAsAction="never" /> <!-- No se muestra como acción en la barra, solo en el overflow -->
 
     <item
         android:id="@+id/item1"
         android:title="Copy"
         android:icon="@drawable/baseline_vpn_key_24"
         app:showAsAction="ifRoom">
+
+        <!-- Texto del item -->
+        <!-- Icono que se muestra junto al texto -->
+        <!-- Se muestra como acción solo si hay espacio en la barra -->
 
         <menu>
 
@@ -29,7 +33,7 @@
             <item
                 android:id="@+id/item5"
                 android:title="Signout"
-                app:showAsAction="never"/>
+                app:showAsAction="never"/>   <!-- Solo aparece en el menú desplegable -->
 
         </menu>
 
