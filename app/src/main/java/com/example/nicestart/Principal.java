@@ -18,7 +18,7 @@ public class Principal extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.principal);
 
-
+        if (getSupportActionBar() != null) getSupportActionBar().hide();
         LottieAnimationView lottie = findViewById(R.id.lottieBackground);
         lottie.playAnimation();
 
