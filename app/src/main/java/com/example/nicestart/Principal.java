@@ -20,9 +20,8 @@ public class Principal extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.principal);
-        f (getSupportActionBar() != null) getSupportActionBar().hide(); // para ocultar la barra de arriba
         ImageView background = findViewById(R.id.backView);
-
+        if (getSupportActionBar() != null) getSupportActionBar().hide(); // para que no salga la barra arriba
         ImageView logo = findViewById(R.id.logosplash);
 
         Animation fadeIn = AnimationUtils.loadAnimation(this, R.anim.set);
