@@ -3,6 +3,8 @@
 NiceStart es una aplicación móvil creada con **Android Studio**, usando **Material Components** y **ConstraintLayout**.  
 Su objetivo es mostrar una interfaz moderna de **login y registro**, con pantallas de bienvenida y presentación (splash), y un diseño visual atractivo.
 
+https://github.com/user-attachments/assets/04a31a7f-c0d0-4279-9c3b-566e2639114d
+
 ---
 
 ## Descripción de los layouts e imágenes
