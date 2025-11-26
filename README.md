@@ -11,14 +11,13 @@ Su objetivo es mostrar una interfaz moderna de **login y registro**, con pantall
 <img width="328" height="593" alt="image" src="https://github.com/user-attachments/assets/e3e629ba-e597-4ea9-8f48-e42587b59fbc" />
 
 
-
 **Funcionalidad:**  
 - Se muestra al abrir la aplicación.  
 - Contiene el **logotipo** de la app y el nombre **NiceStart**.  
 - Diseñada para dar una primera impresión profesional mientras carga la app.
 
 ### 2. Pantalla Login
-<img width="300" height="540" alt="image" src="https://github.com/user-attachments/assets/04f71fb0-3f2c-46cb-b325-cab4d43064e9" />
+<img width="305" height="603" alt="image" src="https://github.com/user-attachments/assets/4e57211b-3978-4275-8d52-50fc483c5b2a" />
 
 
 **Funcionalidad:**  
@@ -29,8 +28,8 @@ Su objetivo es mostrar una interfaz moderna de **login y registro**, con pantall
 
 ---
 
-### 2. Pantalla de Registro (Signup)
-<img width="271" height="487" alt="image" src="https://github.com/user-attachments/assets/22e0b372-12da-478a-9e67-7590930395cf" />
+### 3. Pantalla de Registro (Signup)
+<img width="312" height="603" alt="image" src="https://github.com/user-attachments/assets/90550a50-6d60-4c60-9a9d-ca0d76652710" />
 
 
 **Funcionalidad:**  
@@ -56,5 +55,31 @@ Su objetivo es mostrar una interfaz moderna de **login y registro**, con pantall
  - Se puede utilizar como foto de cuenta o avatar personal, permitiendo identificar al usuario de forma visual.
  - En futuras versiones, podría vincularse con la cuenta creada en el registro y mostrarse en la pantalla principal o en el área de perfil.
 
+---
+### 7.Barra de Aplicación
+<img width="244" height="477" alt="image" src="https://github.com/user-attachments/assets/1c48d988-50f6-46db-b443-463369b42df6" />
+<img width="363" height="634" alt="image" src="https://github.com/user-attachments/assets/05916a91-80ea-492c-ba70-3db84aa35f4a" />
+
+
+**Funcionalidad:**
+ - Este menú representa la navegación principal de la aplicación.
+ - Permite acceder rápidamente a las secciones clave como Bottom app bar, Bottom navigation y Signout.
+ - Proporciona una experiencia de usuario fluida mediante transiciones entre pantallas.
+
+---
+### 8.Logotipo animado con Lottie
+https://github.com/user-attachments/assets/d140ca96-5fbd-4206-80ee-f50cc4f00f68
+
+
+**Funcionalidad:**
+ - Muestra el logotipo de NiceStart animado al abrir la app, funcionando como parte de la pantalla de splash.
+ - La animación está hecha con Lottie y se reproduce automáticamente al iniciar la aplicación.
+ - El archivo de animación se encuentra en res/raw/icono.json.
+ - Se integra mediante un LottieAnimationView, permitiendo controlar reproducción, bucle y velocidad desde el código si se desea.
+ -Aporta una experiencia visual más moderna y profesional, haciendo que el inicio de la app sea dinámico y atractivo
+ - Se integra mediante un LottieAnimationView, permitiendo controlar reproducción, bucle y velocidad desde el código si se desea.
+ -Se encuentra en la rama RamaLottie.
+  
+ --- 
 Este proyecto está bajo la licencia [Creative Commons BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 
