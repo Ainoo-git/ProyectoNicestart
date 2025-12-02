@@ -18,6 +18,11 @@
         <!-- Se muestra como acción solo si hay espacio en la barra -->
 
         <menu>
+            <item
+                android:id="@+id/item_profile"
+                android:title="Profile"
+                android:icon="@drawable/baseline_person_24"
+                app:showAsAction="always" />
 
             <item
                 android:id="@+id/item3"

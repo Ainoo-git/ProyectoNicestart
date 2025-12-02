@@ -1,11 +1,14 @@
 package com.example.nicestart;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -17,23 +20,31 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 public class MainActivity extends AppCompatActivity {
 
-    private SwipeRefreshLayout swipeLayout;
-
-    // Listener del gesto deslizar para refrescar
-    private final SwipeRefreshLayout.OnRefreshListener mOnRefreshListener = () -> {
-        Toast.makeText(MainActivity.this, "Refrescando...", Toast.LENGTH_SHORT).show();
-        swipeLayout.setRefreshing(false);
-    };
-
+    private SwipeRefreshLayout swipeRLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        swipeLayout = findViewById(R.id.myswipe);
-        swipeLayout.setOnRefreshListener(mOnRefreshListener);
+        swipeRLayout = findViewById(R.id.myswipe);
+        swipeRLayout.setOnRefreshListener(monRefreshListener);
+
+        WebView mycontext = findViewById(R.id.vistaweb);
+        registerForContextMenu(mycontext);
+
+
     }
+
+    protected SwipeRefreshLayout.OnRefreshListener monRefreshListener =
+            new SwipeRefreshLayout.OnRefreshListener() {
+                @Override
+                public void onRefresh() {
+                    Toast.makeText(MainActivity.this, "Hola, has recargado la pagina", Toast.LENGTH_LONG).show();
+                    swipeRLayout.setRefreshing(false);
+                }
+            };
+
 
     // Menú contextual
     @Override
@@ -64,9 +75,14 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
+        if (id == R.id.item_profile) {
+            Intent intent = new Intent(MainActivity.this, Profile.class);
+            startActivity(intent);
+            return true;
+        }
+
         if (id == R.id.item5) {
-            // Mostrar el AlertDialog cuando se pulse Signup
-            showAlertDialog();
+            showAlertDialogButtonClicked(MainActivity.this);
             return true;
         }
 
@@ -74,28 +90,40 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private void showAlertDialog() {
-        MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this);
-
-        builder.setTitle("Achtung!");
+    public void showAlertDialogButtonClicked(MainActivity mainActivity){
+        //alert builder
+        MaterialAlertDialogBuilder builder=new MaterialAlertDialogBuilder(this);
+        //el dialogo
+        builder.setTitle("Options!!");
         builder.setMessage("Where do you go?");
         builder.setIcon(R.drawable.baseline_emoji_people_24);
-
-        builder.setPositiveButton("Yes", (dialog, which) -> {
-            Toast.makeText(MainActivity.this, "You clicked Yes", Toast.LENGTH_SHORT).show();
-            dialog.dismiss();
+        builder.setCancelable(true);
+        //añadir botones
+        builder.setPositiveButton("Scrolling", new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which){
+                Toast toast = Toast.makeText(MainActivity.this, "Scrolling...", Toast.LENGTH_LONG);
+                toast.show();
+            }
         });
 
-        builder.setNegativeButton("No", (dialog, which) -> {
-            Toast.makeText(MainActivity.this, "You clicked No", Toast.LENGTH_SHORT).show();
-            dialog.dismiss();
+        builder.setNegativeButton("Do nothing", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
         });
-
-        builder.setNeutralButton("Can't say", (dialog, which) -> {
-            Toast.makeText(MainActivity.this, "You clicked Can't say", Toast.LENGTH_SHORT).show();
-            dialog.dismiss();
+        builder.setNeutralButton("Other", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Intent intent=new Intent(MainActivity.this,Login.class);
+                startActivity(intent);
+                //System.exit(0);
+            }
         });
-
-        builder.create().show();
+        AlertDialog dialog=builder.create();
+        dialog.show();
     }
+
+
 }
