@@ -35,6 +35,7 @@ Aplicación móvil, creada con Android Studio usando Material Components, Constr
 
 | Pantalla | Imagen | Descripción |
 |----------|-------|------------|
+| Uso de la app | https://github.com/user-attachments/assets/6662540a-9c82-4844-b570-9682f1961ea5|  |
 | Splash / Principal | ![Splash](https://github.com/user-attachments/assets/d140ca96-5fbd-4206-80ee-f50cc4f00f68) | Animación de logo y fondo, abre Login tras 5s, se encuentra implementada en la RamaLottie |
 | Icono app |<img width="314" height="75" alt="image" src="https://github.com/user-attachments/assets/f5d113f6-c05f-4685-9004-3d4c1bd00b9c" /> | icono de la aplicación |
 | Login | <img width="331" height="590" alt="image" src="https://github.com/user-attachments/assets/67b8b494-d546-46e4-a964-566ceb6f3c86" /> | Login con campos y botones de navegación |
