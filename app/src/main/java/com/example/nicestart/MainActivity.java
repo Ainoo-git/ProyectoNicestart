@@ -50,20 +50,17 @@ public class MainActivity extends AppCompatActivity {
 
         miVisorWeb.loadDataWithBaseURL(null, html, "text/html", "UTF-8", null);
 
-        // Inset listener para pantallas con bordes y cámaras
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets sysBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(sysBars.left, sysBars.top, sysBars.right, sysBars.bottom);
             return insets;
         });
 
-        // Registrar menú contextual si lo quieres en el WebView o en otro elemento
+
         registerForContextMenu(miVisorWeb);
     }
 
-    // ============================
-    // MENU CONTEXTUAL
-    // ============================
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
@@ -102,10 +99,6 @@ public class MainActivity extends AppCompatActivity {
 
         return true;
     }
-
-    // ============================
-    // MENU SUPERIOR (APPBAR)
-    // ============================
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_appbar, menu);
@@ -131,9 +124,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    // ============================
-    // ALERT CON MATERIAL DESIGN
-    // ============================
+
     private void showAlertDialogButtonClicked() {
 
         MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this);
@@ -155,9 +146,6 @@ public class MainActivity extends AppCompatActivity {
         builder.show();
     }
 
-    // ============================
-    // SWIPE REFRESH
-    // ============================
     protected SwipeRefreshLayout.OnRefreshListener mOnRefreshListener =
             () -> {
                 Toast.makeText(MainActivity.this,
