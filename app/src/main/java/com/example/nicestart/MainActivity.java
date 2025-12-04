@@ -8,63 +8,104 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 public class MainActivity extends AppCompatActivity {
 
-    private SwipeRefreshLayout swipeRLayout;
+    private WebView miVisorWeb;
+    private SwipeRefreshLayout swipeLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        swipeRLayout = findViewById(R.id.myswipe);
-        swipeRLayout.setOnRefreshListener(monRefreshListener);
+        // SwipeRefreshLayout
+        swipeLayout = findViewById(R.id.myswipe);
+        swipeLayout.setOnRefreshListener(mOnRefreshListener);
 
-        WebView mycontext = findViewById(R.id.vistaweb);
-        registerForContextMenu(mycontext);
+        // WebView
+        miVisorWeb = findViewById(R.id.vistaweb);
 
+        String html =
+                "<html>" +
+                        "<head><style>" +
+                        "html, body { margin:0; padding:0; height:100%; overflow:hidden; }" +
+                        "img { width:100%; height:100%; object-fit:cover; }" +
+                        "</style></head>" +
+                        "<body>" +
+                        "<img src='https://thispersondoesnotexist.com' />" +
+                        "</body></html>";
 
+        miVisorWeb.loadDataWithBaseURL(null, html, "text/html", "UTF-8", null);
+
+        // Inset listener para pantallas con bordes y cámaras
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets sysBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(sysBars.left, sysBars.top, sysBars.right, sysBars.bottom);
+            return insets;
+        });
+
+        // Registrar menú contextual si lo quieres en el WebView o en otro elemento
+        registerForContextMenu(miVisorWeb);
     }
 
-    protected SwipeRefreshLayout.OnRefreshListener monRefreshListener =
-            new SwipeRefreshLayout.OnRefreshListener() {
-                @Override
-                public void onRefresh() {
-                    Toast.makeText(MainActivity.this, "Hola, has recargado la pagina", Toast.LENGTH_LONG).show();
-                    swipeRLayout.setRefreshing(false);
-                }
-            };
-
-
-    // Menú contextual
+    // ============================
+    // MENU CONTEXTUAL
+    // ============================
     @Override
-    public void onCreateContextMenu(ContextMenu menu, View v,
-                                    ContextMenu.ContextMenuInfo menuInfo) {
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
-        getMenuInflater().inflate(R.menu.bottom_navigation_menu, menu);
+        getMenuInflater().inflate(R.menu.menu_appbar, menu);
     }
 
     @Override
     public boolean onContextItemSelected(MenuItem item) {
+
         if (item.getItemId() == R.id.item1) {
-            Toast.makeText(this, "ITEM COPY", Toast.LENGTH_LONG).show();
-        } else {
-            Toast.makeText(this, "ITEM DOWNLOADING ITEM", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Item copied", Toast.LENGTH_LONG).show();
+
+        } else if (item.getItemId() == R.id.item2) {
+            Toast.makeText(this, "Downloading item...", Toast.LENGTH_LONG).show();
+
+        } else if (item.getItemId() == R.id.item5) {
+
+            MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this);
+            builder.setTitle("¿Quieres salir?");
+            builder.setMessage("Acción importante");
+
+            builder.setPositiveButton("Ir al login", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    Intent intent = new Intent(MainActivity.this, Login.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(intent);
+                }
+            });
+
+            builder.setNegativeButton("Cancelar", (dialog, which) -> dialog.dismiss());
+
+            AlertDialog dialog = builder.create();
+            dialog.show();
         }
+
         return true;
     }
 
-
+    // ============================
+    // MENU SUPERIOR (APPBAR)
+    // ============================
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_appbar, menu);
@@ -73,6 +114,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
         int id = item.getItemId();
 
         if (id == R.id.item_profile) {
@@ -82,48 +124,45 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (id == R.id.item5) {
-            showAlertDialogButtonClicked(MainActivity.this);
+            showAlertDialogButtonClicked();
             return true;
         }
 
         return super.onOptionsItemSelected(item);
     }
 
+    // ============================
+    // ALERT CON MATERIAL DESIGN
+    // ============================
+    private void showAlertDialogButtonClicked() {
 
-    public void showAlertDialogButtonClicked(MainActivity mainActivity){
-        //alert builder
-        MaterialAlertDialogBuilder builder=new MaterialAlertDialogBuilder(this);
-        //el dialogo
+        MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this);
         builder.setTitle("Options!!");
         builder.setMessage("Where do you go?");
         builder.setIcon(R.drawable.baseline_emoji_people_24);
-        builder.setCancelable(true);
-        //añadir botones
-        builder.setPositiveButton("Scrolling", new DialogInterface.OnClickListener(){
-            @Override
-            public void onClick(DialogInterface dialog, int which){
-                Toast toast = Toast.makeText(MainActivity.this, "Scrolling...", Toast.LENGTH_LONG);
-                toast.show();
-            }
+
+        builder.setPositiveButton("Scrolling", (dialog, which) ->
+                Toast.makeText(MainActivity.this, "Scrolling...", Toast.LENGTH_LONG).show()
+        );
+
+        builder.setNegativeButton("Do nothing", (dialog, which) -> dialog.dismiss());
+
+        builder.setNeutralButton("Other", (dialog, which) -> {
+            Intent intent = new Intent(MainActivity.this, Login.class);
+            startActivity(intent);
         });
 
-        builder.setNegativeButton("Do nothing", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
-            }
-        });
-        builder.setNeutralButton("Other", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Intent intent=new Intent(MainActivity.this,Login.class);
-                startActivity(intent);
-                //System.exit(0);
-            }
-        });
-        AlertDialog dialog=builder.create();
-        dialog.show();
+        builder.show();
     }
 
-
+    // ============================
+    // SWIPE REFRESH
+    // ============================
+    protected SwipeRefreshLayout.OnRefreshListener mOnRefreshListener =
+            () -> {
+                Toast.makeText(MainActivity.this,
+                        "Hi there! I don't exist :)",
+                        Toast.LENGTH_LONG).show();
+                swipeLayout.setRefreshing(false);
+            };
 }
