@@ -1,4 +1,4 @@
-# 🎀 NiceStart - Aplicación Android Moderna de Login y Registro
+# 🎀 NiceStart 
 
 <div align="center">
 
@@ -10,7 +10,7 @@
 
 </div>
 
-Aplicación móvil **moderna y profesional**, creada con Android Studio usando Material Components, ConstraintLayout y Lottie para login, registro y gestión de perfiles.
+Aplicación móvil, creada con Android Studio usando Material Components, ConstraintLayout y Lottie para login, registro, perfil etc...
 
 ---
 
