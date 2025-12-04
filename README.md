@@ -36,12 +36,9 @@ Aplicación móvil, creada con Android Studio usando Material Components, Constr
 | Pantalla | Imagen | Descripción |
 |----------|-------|------------|
 | Splash / Principal | ![Splash](https://github.com/user-attachments/assets/d140ca96-5fbd-4206-80ee-f50cc4f00f68) | Animación de logo y fondo, abre Login tras 5s, se encuentra implementada en la RamaLottie |
-| Icono app |<img width="314" height="75" alt="image" src="https://github.com/user-attachments/assets/f5d113f6-c05f-4685-9004-3d4c1bd00b9c" />
- | icono de la aplicación |
-| Login | <img width="331" height="590" alt="image" src="https://github.com/user-attachments/assets/67b8b494-d546-46e4-a964-566ceb6f3c86" />
- | Login con campos y botones de navegación |
-| Registro (Signup) | <img width="328" height="588" alt="image" src="https://github.com/user-attachments/assets/c3fa0921-b168-40c7-a924-a197df940e00" />
- | Registro de usuario con Username, Password y Email |
+| Icono app |<img width="314" height="75" alt="image" src="https://github.com/user-attachments/assets/f5d113f6-c05f-4685-9004-3d4c1bd00b9c" /> | icono de la aplicación |
+| Login | <img width="331" height="590" alt="image" src="https://github.com/user-attachments/assets/67b8b494-d546-46e4-a964-566ceb6f3c86" /> | Login con campos y botones de navegación |
+| Registro (Signup) | <img width="328" height="588" alt="image" src="https://github.com/user-attachments/assets/c3fa0921-b168-40c7-a924-a197df940e00" />| Registro de usuario con Username, Password y Email |
 | Perfil de Usuario | ![Profile](https://github.com/user-attachments/assets/680d08b4-7aea-4a6b-9f51-3964e444b5dc) | Visualización de avatar, nombre y descripción |
 | MainActivity | ![Main](https://github.com/user-attachments/assets/1c48d988-50f6-46db-b443-463369b42df6) | WebView con SwipeRefreshLayout y menú contextual |
 
