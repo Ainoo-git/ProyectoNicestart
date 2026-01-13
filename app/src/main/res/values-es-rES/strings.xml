@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">NiceStart</string>
-    <string name="btnRegister">Registrarse</string>
-    <string name="btnGoToLogin">Entrar</string>
+    <string name="btnRegister" translatable="true">Registrarse</string>
+    <string name="btnGoToLogin" translatable="false">Registrarse</string>
 </resources>

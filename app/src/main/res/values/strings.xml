@@ -6,4 +6,5 @@
         eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.</string>
     <string name="btnRegister" translatable="false">Registrar</string>
+    <string name="btnGoToLogin" translatable="false">Registrarse</string>
 </resources>
