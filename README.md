@@ -78,8 +78,11 @@ Aplicación móvil, creada con Android Studio usando Material Components, Constr
 - Avatar circular personalizable  
 - Nombre y descripción  
 - Toolbar con flecha atrás  
-- Colores y diseño limpio  
+- Colores y diseño limpio
 
+###  3.6 Locales(Cambio de idioma) 
+- Cambio de idioma según la preferencia
+- 
 ---
 
 ##  4. Estructura del Proyecto
