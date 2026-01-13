@@ -1,85 +1,131 @@
-# Guía de la App NiceStart
+# 🎀 NiceStart 
 
-NiceStart es una aplicación móvil creada con **Android Studio**, usando **Material Components** y **ConstraintLayout**.  
-Su objetivo es mostrar una interfaz moderna de **login y registro**, con pantallas de bienvenida y presentación (splash), y un diseño visual atractivo.
+<div align="center">
 
----
+[![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://developer.android.com/)  
+[![Android Studio](https://img.shields.io/badge/Android_Studio-3DDC84?style=for-the-badge&logo=android-studio&logoColor=white)](https://developer.android.com/studio)  
+[![Material Design](https://img.shields.io/badge/Material--Design-0081CB?style=for-the-badge&logo=material-design&logoColor=white)](https://material.io/)  
+[![Kotlin](https://img.shields.io/badge/Kotlin-0095D5?style=for-the-badge&logo=kotlin&logoColor=white)](https://kotlinlang.org/)  
+[![Licencia](https://img.shields.io/badge/Licencia-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)  
 
-## Descripción de los layouts e imágenes
+</div>
 
-### 1. Pantalla Principal
-<img width="328" height="593" alt="image" src="https://github.com/user-attachments/assets/e3e629ba-e597-4ea9-8f48-e42587b59fbc" />
-
-
-**Funcionalidad:**  
-- Se muestra al abrir la aplicación.  
-- Contiene el **logotipo** de la app y el nombre **NiceStart**.  
-- Diseñada para dar una primera impresión profesional mientras carga la app.
-
-### 2. Pantalla Login
-<img width="305" height="603" alt="image" src="https://github.com/user-attachments/assets/4e57211b-3978-4275-8d52-50fc483c5b2a" />
-
-
-**Funcionalidad:**  
-- Permite al usuario ingresar su **nombre de usuario** y **contraseña**.  
-- Contiene los campos: `Username` y `Password` con íconos al inicio para mejorar la experiencia visual.  
-- Incluye un botón **LOGIN** que valida las credenciales y un botón **SIGN UP** para ir a la pantalla de registro.  
-- Todo está alineado y centrado usando `ConstraintLayout` y `Guidelines`.
+Aplicación móvil, creada con Android Studio usando Material Components, ConstraintLayout y Lottie para login, registro, perfil etc...
 
 ---
 
-### 3. Pantalla de Registro (Signup)
-<img width="312" height="603" alt="image" src="https://github.com/user-attachments/assets/90550a50-6d60-4c60-9a9d-ca0d76652710" />
+## ✨ 1. Características Principales
 
+###  1.1 Diseño UI/UX
+- Material Design 3  
+- Layouts responsivos con Edge-to-Edge  
+- Pantalla de inicio animada (fadeIn + Glide)  
+- Gradientes personalizados e iconos vectoriales  
+- Soporte para tema claro/oscuro  
 
-**Funcionalidad:**  
-- Permite al usuario crear una nueva cuenta ingresando datos como nombre, correo y contraseña.  
-- Campos con `TextInputLayout` y `TextInputEditText` para una interfaz limpia y fácil de usar.  
-- Botón **SIGN UP** para guardar la información y volver al login o abrir la pantalla principal.  
+###  1.2 Autenticación y Navegación
+- Login y Signup con navegación directa  
+- Campos de usuario, contraseña y email  
+- Botones con colores y estilos personalizados  
+- Toolbar en perfil con flecha atrás  
+
+---
+
+##  2. Pantallas de la Aplicación
+
+| Pantalla | Imagen | Descripción |
+|----------|-------|------------|
+| Uso de la app | https://github.com/user-attachments/assets/f2cec306-ac57-4ecd-9ce9-e71670e55cff|  |
+| Splash / Principal | ![Splash](https://github.com/user-attachments/assets/d140ca96-5fbd-4206-80ee-f50cc4f00f68) | Animación de logo y fondo, abre Login tras 5s, se encuentra implementada en la RamaLottie |
+| Icono app |<img width="314" height="75" alt="image" src="https://github.com/user-attachments/assets/f5d113f6-c05f-4685-9004-3d4c1bd00b9c" /> | icono de la aplicación |
+| Login | <img width="356" height="636" alt="Captura de pantalla 2025-12-08 133550" src="https://github.com/user-attachments/assets/85d98e3a-d0fd-475a-a11f-067378910b1f"/> | Login con campos y botones de navegación |
+| Registro (Signup) |<img width="360" height="641" alt="Captura de pantalla 2025-12-08 133638" src="https://github.com/user-attachments/assets/e8bce2c0-d00d-4620-9728-0f355fefa935" />| Registro de usuario con Username, Password y Email |
+| Perfil de Usuario | ![Profile](https://github.com/user-attachments/assets/680d08b4-7aea-4a6b-9f51-3964e444b5dc) | Visualización de avatar, nombre y descripción |
+| MainActivity |<img width="353" height="643" alt="Captura de pantalla 2025-12-08 134054" src="https://github.com/user-attachments/assets/5effe96c-d212-4728-af78-89c556d17ebb" />| WebView con SwipeRefreshLayout y menú contextual |
 
 ---
 
-### 4. Icono de la App
-![App Icon](https://github.com/user-attachments/assets/70b39898-7126-468c-a760-3fec15458285)
+##  3. Funcionalidades por Pantalla
 
-**Funcionalidad:**  
- - Mantiene coherencia visual con los colores y estilo de la interfaz.
-   
----
-### 5. Perfil del usuario 
-<img width="272" height="486" alt="image" src="https://github.com/user-attachments/assets/680d08b4-7aea-4a6b-9f51-3964e444b5dc" />
+###  3.1 Splash / Principal
+- Animación del logo con fadeIn  
+- Fondo cargado con Glide  
+- Después de 5 segundos, abre la pantalla de Login  
 
+###  3.2 Login
+- Campos de Username y Password con iconos  
+- Botón **LOGIN** abre MainActivity  
+- Botón **SIGN UP** abre Signup  
+- Diseño responsivo y moderno  
 
-**Funcionalidad:**  
- - Esta imagen representa el perfil del usuario dentro de la aplicación.
- - Se puede utilizar como foto de cuenta o avatar personal, permitiendo identificar al usuario de forma visual.
- - En futuras versiones, podría vincularse con la cuenta creada en el registro y mostrarse en la pantalla principal o en el área de perfil.
+###  3.3 Registro (Signup)
+- Campos de Username, Password y Email  
+- Botón **CREATE ACCOUNT** abre Login  
+- Botón **LOGIN** vuelve al Login  
+- Estilo Material y layout responsivo  
 
----
-### 7.Barra de Aplicación
-<img width="244" height="477" alt="image" src="https://github.com/user-attachments/assets/1c48d988-50f6-46db-b443-463369b42df6" />
-<img width="363" height="634" alt="image" src="https://github.com/user-attachments/assets/05916a91-80ea-492c-ba70-3db84aa35f4a" />
+###  3.4 MainActivity
+- WebView con imagen aleatoria  
+- SwipeRefreshLayout con mensaje de actualización  
+- Menú contextual y appbar con opciones:  
+  - Copiar ítem (Toast)  
+  - Descargar ítem (Toast)  
+  - Salir / ir al Login  
+  - Abrir Perfil  
+  - AlertDialog con opciones de navegación  
 
+###  3.5 Perfil
+- Avatar circular personalizable  
+- Nombre y descripción  
+- Toolbar con flecha atrás  
+- Colores y diseño limpio
 
-**Funcionalidad:**
- - Este menú representa la navegación principal de la aplicación.
- - Permite acceder rápidamente a las secciones clave como Bottom app bar, Bottom navigation y Signout.
- - Proporciona una experiencia de usuario fluida mediante transiciones entre pantallas.
+###  3.6 Locales(Cambio de idioma) 
+- Cambio de idioma según la preferencia
 
----
-### 8.Logotipo animado con Lottie
-https://github.com/user-attachments/assets/d140ca96-5fbd-4206-80ee-f50cc4f00f68
-
-
-**Funcionalidad:**
- - Muestra el logotipo de NiceStart animado al abrir la app, funcionando como parte de la pantalla de splash.
- - La animación está hecha con Lottie y se reproduce automáticamente al iniciar la aplicación.
- - El archivo de animación se encuentra en res/raw/icono.json.
- - Se integra mediante un LottieAnimationView, permitiendo controlar reproducción, bucle y velocidad desde el código si se desea.
- -Aporta una experiencia visual más moderna y profesional, haciendo que el inicio de la app sea dinámico y atractivo
- - Se integra mediante un LottieAnimationView, permitiendo controlar reproducción, bucle y velocidad desde el código si se desea.
- -Se encuentra en la rama RamaLottie.
+###  3.6 Funcionalidad de alternancia entre modo claro y modo oscuro.
+- Cambio de tema: claro / oscuro
   
- --- 
-Este proyecto está bajo la licencia [Creative Commons BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+---
 
+##  4. Estructura del P
+royecto
+
+NiceStart/
+├── AndroidManifest.xml
+├── java/com.example.nicestart/
+│ ├── MainActivity.java
+│ ├── Login.java
+│ ├── Signup.java
+│ ├── Principal.java
+│ └── Profile.java
+├── res/
+│ ├── layout/
+│ ├── menu/
+│ ├── drawable/
+│ ├── anim/
+│ ├── color/
+│ └── values/
+└── Gradle Scripts/
+
+
+
+---
+
+##  5. Tecnologías Utilizadas
+
+| Tecnología          | Uso en el Proyecto                      |
+|--------------------|---------------------------------------|
+| Android Studio      | Desarrollo y construcción             |
+| Material Components | Componentes UI modernos               |
+| ConstraintLayout    | Layouts responsivos y flexibles       |
+| Glide               | Carga de imágenes en Splash           |
+| SwipeRefreshLayout  | Actualización de WebView              |
+| Gradle              | Gestión de dependencias y build       |
+
+---
+
+##  6. Licencia
+
+Este proyecto está licenciado bajo **Creative Commons Atribución-CompartirIgual 4.0 Internacional**.  
+[![CC BY-SA 4.0](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-sa/4.0/)
