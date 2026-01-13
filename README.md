@@ -82,7 +82,7 @@ Aplicación móvil, creada con Android Studio usando Material Components, Constr
 
 ###  3.6 Locales(Cambio de idioma) 
 - Cambio de idioma según la preferencia
-- 
+  
 ---
 
 ##  4. Estructura del Proyecto
