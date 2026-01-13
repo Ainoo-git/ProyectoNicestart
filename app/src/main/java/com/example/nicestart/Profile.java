@@ -2,7 +2,7 @@ package com.example.nicestart;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
+import com.google.android.material.appbar.MaterialToolbar;
 
 public class Profile extends AppCompatActivity {
 
@@ -12,9 +12,8 @@ public class Profile extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
 
         // Toolbar con flecha atrás
-        Toolbar toolbar = findViewById(R.id.topAppBar);
+        MaterialToolbar toolbar = findViewById(R.id.topAppBar);
         setSupportActionBar(toolbar);
-
-        toolbar.setNavigationOnClickListener(v -> finish());
+        toolbar.setNavigationOnClickListener(v -> finish()); // 🔹 Volver al MainActivity
     }
 }

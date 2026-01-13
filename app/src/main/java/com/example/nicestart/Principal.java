@@ -1,6 +1,7 @@
 package com.example.nicestart;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
@@ -13,6 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
+
+import jp.wasabeef.glide.transformations.ColorFilterTransformation;
 
 public class Principal extends AppCompatActivity {
 
@@ -28,11 +31,11 @@ public class Principal extends AppCompatActivity {
         logo.startAnimation(fadeIn);
 
         Glide.with(this)
-                .load(R.drawable.Fondo)
+                .load(R.drawable.img)
                 .transition(DrawableTransitionOptions.withCrossFade(100))
                 .centerCrop()
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
-                .placeholder(new ColorDrawable(this.getResources().getColor(R.color.teal_200)))
+                .transform(new ColorFilterTransformation(Color.parseColor("#80000000")))
                 .into(background);
 
         openApp();

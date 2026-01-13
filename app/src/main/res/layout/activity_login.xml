@@ -8,6 +8,19 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradient">
 
+    <!--IMAGEN TRANSLÚCIDA ENCIMA DEL DEGRADADO, SE AÑADE ALPHA -->
+    <ImageView
+        android:id="@+id/overlay_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/img"
+        android:scaleType="centerCrop"
+        android:alpha="0.35"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_start"
         android:layout_width="wrap_content"
@@ -21,7 +34,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.77" />
-
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_top"
@@ -73,7 +85,6 @@
             android:textColor="@color/black"/>
     </com.google.android.material.textfield.TextInputLayout>
 
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilPass"
         android:layout_width="0dp"
@@ -98,7 +109,6 @@
             android:textColorHint="@color/black"
             android:textColor="@color/black"/>
     </com.google.android.material.textfield.TextInputLayout>
-
 
     <Button
         android:id="@+id/login"
@@ -132,4 +142,5 @@
         app:layout_constraintStart_toStartOf="@id/guideline_start"
         app:layout_constraintTop_toBottomOf="@id/login"
         app:layout_constraintVertical_bias="0.0" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

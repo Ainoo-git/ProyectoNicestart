@@ -31,6 +31,13 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
+        //  usar el ID correcto del ConstraintLayout
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.mainLayout), (v, insets) -> {
+            Insets sysBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(sysBars.left, sysBars.top, sysBars.right, sysBars.bottom);
+            return insets;
+        });
+
         // SwipeRefreshLayout
         swipeLayout = findViewById(R.id.myswipe);
         swipeLayout.setOnRefreshListener(mOnRefreshListener);
@@ -38,27 +45,25 @@ public class MainActivity extends AppCompatActivity {
         // WebView
         miVisorWeb = findViewById(R.id.vistaweb);
 
-        String html =
-                "<html>" +
-                        "<head><style>" +
-                        "html, body { margin:0; padding:0; height:100%; overflow:hidden; }" +
-                        "img { width:100%; height:100%; object-fit:cover; }" +
-                        "</style></head>" +
-                        "<body>" +
-                        "<img src='https://thispersondoesnotexist.com' />" +
-                        "</body></html>";
+        String html = "<html>" +
+                "<head><style>" +
+                "html, body { margin:0; padding:0; height:100%; overflow:hidden; }" +
+                "img { width:100%; height:100%; object-fit:cover; }" +
+                "</style></head>" +
+                "<body>" +
+                "<img src='https://thispersondoesnotexist.com' />" +
+                "</body></html>";
 
         miVisorWeb.loadDataWithBaseURL(null, html, "text/html", "UTF-8", null);
 
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets sysBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(sysBars.left, sysBars.top, sysBars.right, sysBars.bottom);
-            return insets;
+        registerForContextMenu(miVisorWeb);
+
+        miVisorWeb.setOnLongClickListener(v -> {
+            openContextMenu(miVisorWeb);
+            return true;
         });
 
-
-        registerForContextMenu(miVisorWeb);
     }
 
     @Override
@@ -82,13 +87,10 @@ public class MainActivity extends AppCompatActivity {
             builder.setTitle("¿Quieres salir?");
             builder.setMessage("Acción importante");
 
-            builder.setPositiveButton("Ir al login", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    Intent intent = new Intent(MainActivity.this, Login.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                    startActivity(intent);
-                }
+            builder.setPositiveButton("Ir al login", (dialog, which) -> {
+                Intent intent = new Intent(MainActivity.this, Login.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
             });
 
             builder.setNegativeButton("Cancelar", (dialog, which) -> dialog.dismiss());
@@ -99,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
 
         return true;
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_appbar, menu);
@@ -111,8 +114,7 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.item_profile) {
-            Intent intent = new Intent(MainActivity.this, Profile.class);
-            startActivity(intent);
+            startActivity(new Intent(MainActivity.this, Profile.class));
             return true;
         }
 
@@ -123,7 +125,6 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
 
     private void showAlertDialogButtonClicked() {
 
