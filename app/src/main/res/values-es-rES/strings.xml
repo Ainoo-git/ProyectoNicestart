@@ -2,5 +2,5 @@
 <resources>
     <string name="app_name">NiceStart</string>
     <string name="btnRegister" translatable="true">Registrarse</string>
-    <string name="btnGoToLogin" translatable="false">Registrarse</string>
+    <string name="btnGoToLogin" translatable="true">Registrarse</string>
 </resources>
