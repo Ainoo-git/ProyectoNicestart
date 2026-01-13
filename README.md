@@ -82,10 +82,14 @@ Aplicación móvil, creada con Android Studio usando Material Components, Constr
 
 ###  3.6 Locales(Cambio de idioma) 
 - Cambio de idioma según la preferencia
+
+###  3.6 Funcionalidad de alternancia entre modo claro y modo oscuro.
+- Cambio de tema: claro / oscuro
   
 ---
 
-##  4. Estructura del Proyecto
+##  4. Estructura del P
+royecto
 
 NiceStart/
 ├── AndroidManifest.xml
