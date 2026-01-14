@@ -88,8 +88,7 @@ Aplicación móvil, creada con Android Studio usando Material Components, Constr
   
 ---
 
-##  4. Estructura del P
-royecto
+##  4. Estructura del Proyecto
 
 NiceStart/
 ├── AndroidManifest.xml
@@ -114,7 +113,7 @@ NiceStart/
 
 ##  5. Tecnologías Utilizadas
 
-| Tecnología          | Uso en el Proyecto                      |
+| Tecnología          | Uso en el Proyecto                    |
 |--------------------|---------------------------------------|
 | Android Studio      | Desarrollo y construcción             |
 | Material Components | Componentes UI modernos               |
