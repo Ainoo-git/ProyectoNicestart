@@ -14,7 +14,7 @@ import com.example.nicestart.R;
 import com.google.android.material.bottomappbar.BottomAppBar;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-public class MainBAB extends AppCompatActivity {
+public class MainBab extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

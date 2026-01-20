@@ -1,4 +1,6 @@
-package app.example.nicestart;
+package com.example.nicestart;
+
+import static kotlinx.coroutines.android.HandlerDispatcherKt.Main;
 
 import android.content.DialogInterface;
 import android.graphics.Color;
@@ -21,7 +23,7 @@ import com.example.nicestart.R;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.snackbar.Snackbar;
 
-public class Main extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
     private WebView myWebView;
     private SwipeRefreshLayout swipeLayout;
 
@@ -31,13 +33,13 @@ public class Main extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        WebView myContext = findViewById(R.id.vistaWeb);
+        WebView myContext = findViewById(R.id.vistaweb);
         registerForContextMenu(myContext);
 
-        swipeLayout = findViewById(R.id.swipeRefresh);
+        swipeLayout = findViewById(R.id.myswipe);
         swipeLayout.setOnRefreshListener(mOnRefreshListener);
 
-        myWebView = (WebView) findViewById(R.id.vistaWeb);
+        myWebView = (WebView) findViewById(R.id.vistaweb);
 
         WebSettings webSettings = myWebView.getSettings();
         webSettings.setLoadWithOverviewMode(true);
@@ -48,7 +50,7 @@ public class Main extends AppCompatActivity {
 
     // DIÁLOGO MODAL
 
-    public void showAlertDialogButtonClicked(Main mainActivity) {
+    public void showAlertDialogButtonClicked(MainActivity mainActivity) {
         MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this);
 
         builder.setTitle("Ejemplo");
@@ -115,16 +117,16 @@ public class Main extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        if (id == R.id.buscar) {
+        if (id == R.id.item4) {
             Toast toast = Toast.makeText(this, "Pulsado el buscar", Toast.LENGTH_LONG);
             toast.show();
         }
-        if (id == R.id.favoritos) {
+        if (id == R.id.item3) {
             Toast toast = Toast.makeText(this, "Pulsado el favoritos", Toast.LENGTH_LONG);
             toast.show();
         }
-        if (id == R.id.ajustes) {
-            showAlertDialogButtonClicked(Main.this);
+        if (id == R.id.item_profile) {
+            showAlertDialogButtonClicked(MainActivity.this);
         }
         return super.onOptionsItemSelected(item);
     }
@@ -133,7 +135,7 @@ public class Main extends AppCompatActivity {
 
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
-        getMenuInflater().inflate(R.menu.menu_context, menu);
+        getMenuInflater().inflate(R.menu.menu_appbar, menu);
     }
 
     @Override
@@ -142,7 +144,7 @@ public class Main extends AppCompatActivity {
             Toast toast = Toast.makeText(this, "Item1 seleccionado",
                     Toast.LENGTH_LONG);
             toast.show();
-        } else if (item.getItemId() == R.id.item2) {
+        } else if (item.getItemId() == R.id.item4) {
             Toast toast2 = Toast.makeText(this, "Item2 seleccionado",
                     Toast.LENGTH_LONG);
             toast2.show();
