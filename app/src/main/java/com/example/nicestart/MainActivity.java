@@ -1,4 +1,4 @@
-package app.malmorox.nicestart;
+package app.example.nicestart;
 
 import android.content.DialogInterface;
 import android.graphics.Color;

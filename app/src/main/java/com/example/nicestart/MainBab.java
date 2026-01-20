@@ -1,4 +1,4 @@
-package app.malmorox.nicestart;
+package app.example.nicestart;
 
 import android.os.Bundle;
 import android.view.View;
@@ -41,6 +41,6 @@ public class MainBAB extends AppCompatActivity {
     }
 }
 
-private void showBottomSheetDialog() {
+/**private void showBottomSheetDialog() {
 
-}
+}**/
