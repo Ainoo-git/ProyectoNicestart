@@ -1,28 +1,28 @@
-package com.example.nicestart;
+package app.malmorox.nicestart;
 
 import android.content.DialogInterface;
-import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
+import com.example.nicestart.R;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.google.android.material.snackbar.Snackbar;
 
-public class MainActivity extends AppCompatActivity {
-
-    private WebView miVisorWeb;
+public class Main extends AppCompatActivity {
+    private WebView myWebView;
     private SwipeRefreshLayout swipeLayout;
 
     @Override
@@ -31,74 +31,80 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        // SwipeRefreshLayout
-        swipeLayout = findViewById(R.id.myswipe);
+        WebView myContext = findViewById(R.id.vistaWeb);
+        registerForContextMenu(myContext);
+
+        swipeLayout = findViewById(R.id.swipeRefresh);
         swipeLayout.setOnRefreshListener(mOnRefreshListener);
 
-        // WebView
-        miVisorWeb = findViewById(R.id.vistaweb);
+        myWebView = (WebView) findViewById(R.id.vistaWeb);
 
-        String html =
-                "<html>" +
-                        "<head><style>" +
-                        "html, body { margin:0; padding:0; height:100%; overflow:hidden; }" +
-                        "img { width:100%; height:100%; object-fit:cover; }" +
-                        "</style></head>" +
-                        "<body>" +
-                        "<img src='https://thispersondoesnotexist.com' />" +
-                        "</body></html>";
+        WebSettings webSettings = myWebView.getSettings();
+        webSettings.setLoadWithOverviewMode(true);
+        webSettings.setUseWideViewPort(true);
 
-        miVisorWeb.loadDataWithBaseURL(null, html, "text/html", "UTF-8", null);
+        myWebView.loadUrl("file:///android_asset/persona.html");
+    }
 
+    // DIÁLOGO MODAL
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets sysBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(sysBars.left, sysBars.top, sysBars.right, sysBars.bottom);
-            return insets;
+    public void showAlertDialogButtonClicked(Main mainActivity) {
+        MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this);
+
+        builder.setTitle("Ejemplo");
+        builder.setMessage("Ejemplo de AlertDialog");
+        builder.setCancelable(true);
+
+        //builder.setView(getLayoutInflater().inflate(R.layout.alertdialog_view, null));
+
+        builder.setPositiveButton("Si", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
         });
 
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
 
-        registerForContextMenu(miVisorWeb);
+        builder.setNeutralButton("Otro", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                System.exit(0);
+                dialog.dismiss();
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 
-    @Override
-    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
-        super.onCreateContextMenu(menu, v, menuInfo);
-        getMenuInflater().inflate(R.menu.menu_appbar, menu);
-    }
+    // SWIPE REFRESH
 
-    @Override
-    public boolean onContextItemSelected(MenuItem item) {
+    protected SwipeRefreshLayout.OnRefreshListener
+            mOnRefreshListener = new SwipeRefreshLayout.OnRefreshListener() {
+        @Override
+        public void onRefresh() {
+            //Toast toast = Toast.makeText(Main.this, "Ejemplo de Toast", Toast.LENGTH_LONG);
+            //toast.show();
 
-        if (item.getItemId() == R.id.item1) {
-            Toast.makeText(this, "Item copied", Toast.LENGTH_LONG).show();
+            ConstraintLayout mainLayout = findViewById(R.id.main);
 
-        } else if (item.getItemId() == R.id.item2) {
-            Toast.makeText(this, "Downloading item...", Toast.LENGTH_LONG).show();
+            Snackbar snackbar = Snackbar
+                    .make(mainLayout, "Nueva persona desbloqueda", Snackbar.LENGTH_LONG);
+            snackbar.show();
 
-        } else if (item.getItemId() == R.id.item5) {
-
-            MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this);
-            builder.setTitle("¿Quieres salir?");
-            builder.setMessage("Acción importante");
-
-            builder.setPositiveButton("Ir al login", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    Intent intent = new Intent(MainActivity.this, Login.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                    startActivity(intent);
-                }
-            });
-
-            builder.setNegativeButton("Cancelar", (dialog, which) -> dialog.dismiss());
-
-            AlertDialog dialog = builder.create();
-            dialog.show();
+            myWebView.reload();
+            swipeLayout.setRefreshing(false);
         }
+    };
 
-        return true;
-    }
+    // MENU APPBAR
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_appbar, menu);
@@ -107,50 +113,40 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-
         int id = item.getItemId();
 
-        if (id == R.id.item_profile) {
-            Intent intent = new Intent(MainActivity.this, Profile.class);
-            startActivity(intent);
-            return true;
+        if (id == R.id.buscar) {
+            Toast toast = Toast.makeText(this, "Pulsado el buscar", Toast.LENGTH_LONG);
+            toast.show();
         }
-
-        if (id == R.id.item5) {
-            showAlertDialogButtonClicked();
-            return true;
+        if (id == R.id.favoritos) {
+            Toast toast = Toast.makeText(this, "Pulsado el favoritos", Toast.LENGTH_LONG);
+            toast.show();
         }
-
+        if (id == R.id.ajustes) {
+            showAlertDialogButtonClicked(Main.this);
+        }
         return super.onOptionsItemSelected(item);
     }
 
+    // MENU CONTEXTUAL
 
-    private void showAlertDialogButtonClicked() {
-
-        MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this);
-        builder.setTitle("Options!!");
-        builder.setMessage("Where do you go?");
-        builder.setIcon(R.drawable.baseline_emoji_people_24);
-
-        builder.setPositiveButton("Scrolling", (dialog, which) ->
-                Toast.makeText(MainActivity.this, "Scrolling...", Toast.LENGTH_LONG).show()
-        );
-
-        builder.setNegativeButton("Do nothing", (dialog, which) -> dialog.dismiss());
-
-        builder.setNeutralButton("Other", (dialog, which) -> {
-            Intent intent = new Intent(MainActivity.this, Login.class);
-            startActivity(intent);
-        });
-
-        builder.show();
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        getMenuInflater().inflate(R.menu.menu_context, menu);
     }
 
-    protected SwipeRefreshLayout.OnRefreshListener mOnRefreshListener =
-            () -> {
-                Toast.makeText(MainActivity.this,
-                        "Hi there! I don't exist :)",
-                        Toast.LENGTH_LONG).show();
-                swipeLayout.setRefreshing(false);
-            };
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.item1) {
+            Toast toast = Toast.makeText(this, "Item1 seleccionado",
+                    Toast.LENGTH_LONG);
+            toast.show();
+        } else if (item.getItemId() == R.id.item2) {
+            Toast toast2 = Toast.makeText(this, "Item2 seleccionado",
+                    Toast.LENGTH_LONG);
+            toast2.show();
+        }
+        return false;
+    }
 }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="white">#121212</color>   <!-- fondo oscuro -->
-    <color name="black">#FFFFFF</color>   <!-- texto claro -->
+    <color name="white">#9B9898</color>   <!-- fondo oscuro -->
+    <color name="black">#000000</color>   <!-- texto claro -->
 
     <color name="verdecitoAzulado">#8E63C7</color>
     <color name="rosita">#E8A1B5</color>
