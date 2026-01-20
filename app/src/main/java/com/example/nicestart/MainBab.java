@@ -1,4 +1,4 @@
-package app.example.nicestart;
+package com.example.nicestart;
 
 import android.os.Bundle;
 import android.view.View;
@@ -27,14 +27,14 @@ public class MainBab extends AppCompatActivity {
         bottomAppBar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainBAB.this, "clickado", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainBab.this, "clickado", Toast.LENGTH_SHORT).show();
             }
         });
 
         bottomAppBar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainBAB.this, "FAB ha sido clickado", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainBab.this, "FAB ha sido clickado", Toast.LENGTH_SHORT).show();
                 //showBottomSheetDialog();
             }
         });
