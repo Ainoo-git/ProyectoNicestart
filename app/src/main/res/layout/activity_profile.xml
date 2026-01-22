@@ -55,7 +55,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="230dp"
             android:gravity="center"
-            android:text="@string/descripcion"
+            android:text="@string/lorem"
             android:textColor="@color/black"
             android:textSize="16sp" />
 

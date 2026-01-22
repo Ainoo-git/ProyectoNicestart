@@ -3,6 +3,7 @@ package com.example.nicestart;
 import static kotlinx.coroutines.android.HandlerDispatcherKt.Main;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.ContextMenu;
@@ -117,19 +118,26 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        if (id == R.id.item4) {
-            Toast toast = Toast.makeText(this, "Pulsado el buscar", Toast.LENGTH_LONG);
-            toast.show();
-        }
         if (id == R.id.item3) {
-            Toast toast = Toast.makeText(this, "Pulsado el favoritos", Toast.LENGTH_LONG);
-            toast.show();
+            // Ir a MainBab
+            startActivity(new Intent(this, MainBab.class));
+            return true;
         }
+
+       /* if (id == R.id.item4) {
+            // Ir a MainBn
+            startActivity(new Intent(this, MainBn.class));
+            return true;
+        }*/
+
         if (id == R.id.item_profile) {
             showAlertDialogButtonClicked(MainActivity.this);
+            return true;
         }
+
         return super.onOptionsItemSelected(item);
     }
+
 
     // MENU CONTEXTUAL
 
