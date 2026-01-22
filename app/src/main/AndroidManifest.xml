@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NiceStart">
 
-        <!-- Launcher -->
+        <!-- LAUNCHER -->
         <activity
             android:name=".Principal"
             android:exported="true"
@@ -22,11 +22,13 @@
             </intent-filter>
         </activity>
 
-        <!-- Otras actividades -->
+        <!-- Otras pantallas -->
         <activity android:name=".Login" android:exported="true"/>
         <activity android:name=".Signup" android:exported="true"/>
         <activity android:name=".MainActivity" android:exported="true"/>
         <activity android:name=".Profile" android:exported="true"/>
+        <!--<activity android:name=".MainBn" android:exported="true"/>-->
+        <activity android:name=".MainBab" android:exported="true"/>
 
     </application>
 

@@ -46,7 +46,8 @@ public class MainActivity extends AppCompatActivity {
         webSettings.setLoadWithOverviewMode(true);
         webSettings.setUseWideViewPort(true);
 
-        myWebView.loadUrl("file:///android_asset/persona.html");
+        myWebView.loadUrl("https://thispersondoesnotexist.com");
+
     }
 
     // DIÁLOGO MODAL
@@ -89,22 +90,22 @@ public class MainActivity extends AppCompatActivity {
     // SWIPE REFRESH
 
     protected SwipeRefreshLayout.OnRefreshListener
-            mOnRefreshListener = new SwipeRefreshLayout.OnRefreshListener() {
-        @Override
-        public void onRefresh() {
-            //Toast toast = Toast.makeText(Main.this, "Ejemplo de Toast", Toast.LENGTH_LONG);
-            //toast.show();
+            mOnRefreshListener = () -> {
 
-            ConstraintLayout mainLayout = findViewById(R.id.main);
+        ConstraintLayout mainLayout = findViewById(R.id.main);
 
-            Snackbar snackbar = Snackbar
-                    .make(mainLayout, "Nueva persona desbloqueda", Snackbar.LENGTH_LONG);
-            snackbar.show();
+        Snackbar.make(
+                mainLayout,
+                "Nueva persona generada",
+                Snackbar.LENGTH_SHORT
+        ).show();
 
-            myWebView.reload();
-            swipeLayout.setRefreshing(false);
-        }
+        // recarga nueva persona
+        myWebView.reload();
+
+        swipeLayout.setRefreshing(false);
     };
+
 
     // MENU APPBAR
 
