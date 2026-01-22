@@ -8,21 +8,40 @@
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/coordinator"
         android:layout_width="match_parent"
-        android:layout_height="92dp"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
+        <!-- Contenido scrollable (puedes cambiarlo luego) -->
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="@string/lorem"
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
+        </androidx.core.widget.NestedScrollView>
+
+        <!-- BottomAppBar -->
         <com.google.android.material.bottomappbar.BottomAppBar
             android:id="@+id/bottom_app_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
+            android:backgroundTint="@color/verdeOscuro"
             app:fabAlignmentMode="center"
             app:menu="@menu/bottom_app_bar_menu"
             app:navigationIcon="@drawable/ic_burger"
-            android:backgroundTint="@color/verdeOscuro"/>
+            app:hideOnScroll="true"/>
 
+        <!-- FAB -->
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/floating_action_button"
             android:layout_width="wrap_content"
@@ -30,8 +49,8 @@
             android:backgroundTint="@color/verdecitoAzulado"
             android:src="@drawable/add"
             app:fabSize="normal"
-            app:layout_anchor="@+id/bottom_app_bar"
-            app:tint="@android:color/white" />
+            app:layout_anchor="@id/bottom_app_bar"
+            app:tint="@android:color/white"/>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
