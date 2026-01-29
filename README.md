@@ -86,7 +86,13 @@ Aplicación móvil, creada con Android Studio usando Material Components, Constr
 
 ###  3.6 Funcionalidad de alternancia entre modo claro y modo oscuro.
 - Cambio de tema: claro / oscuro
-  
+
+###  3.7 BottomAppBar
+- FloatingActionButton (FAB) centrado
+- Menú de opciones
+- Icono de navegación
+- Interacción con el contenido:
+- 
 ---
 
 ##  4. Estructura del Proyecto
