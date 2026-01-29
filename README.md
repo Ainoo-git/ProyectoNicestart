@@ -42,6 +42,7 @@ Aplicación móvil, creada con Android Studio usando Material Components, Constr
 | Registro (Signup) |<img width="360" height="641" alt="Captura de pantalla 2025-12-08 133638" src="https://github.com/user-attachments/assets/e8bce2c0-d00d-4620-9728-0f355fefa935" />| Registro de usuario con Username, Password y Email |
 | Perfil de Usuario | ![Profile](https://github.com/user-attachments/assets/680d08b4-7aea-4a6b-9f51-3964e444b5dc) | Visualización de avatar, nombre y descripción |
 | MainActivity |<img width="353" height="643" alt="Captura de pantalla 2025-12-08 134054" src="https://github.com/user-attachments/assets/5effe96c-d212-4728-af78-89c556d17ebb" />| WebView con SwipeRefreshLayout y menú contextual |
+|BottomAppBar |<img width="275" height="486" alt="image" src="https://github.com/user-attachments/assets/5d1c2019-27aa-4fbc-98b0-18ca03d71e51" />|SwipeRefreshLayout con WebView y BottomAppBar|
 
 ---
 
