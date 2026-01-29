@@ -96,6 +96,7 @@ Aplicación móvil, creada con Android Studio usando Material Components, Constr
 
 ##  4. Estructura del Proyecto
 
+```
 NiceStart/
 ├── AndroidManifest.xml
 ├── java/com.example.nicestart/
@@ -103,7 +104,9 @@ NiceStart/
 │ ├── Login.java
 │ ├── Signup.java
 │ ├── Principal.java
-│ └── Profile.java
+│ ├── Profile.java
+│ ├── MainBab.java
+│ └── MainBn.java
 ├── res/
 │ ├── layout/
 │ ├── menu/
@@ -114,6 +117,7 @@ NiceStart/
 └── Gradle Scripts/
 
 
+```
 
 ---
 
