@@ -91,8 +91,7 @@ Aplicación móvil, creada con Android Studio usando Material Components, Constr
 - FloatingActionButton (FAB) centrado
 - Menú de opciones
 - Icono de navegación
-- Interacción con el contenido:
-- 
+- Interacción con el contenido: 
 ---
 
 ##  4. Estructura del Proyecto
