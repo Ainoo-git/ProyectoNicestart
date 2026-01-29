@@ -5,7 +5,7 @@
     <item
         android:id="@+id/likes"
         android:title="Likes"
-        android:icon="@drawable/ic_heart"
+        android:icon="@drawable/ic_add"
         android:contentDescription="none"
         app:showAsAction="always"
         />

@@ -5,15 +5,13 @@
     <item
         android:id="@+id/heart"
         android:title="Favourite"
-        android:icon="@drawable/ic_heart"
-        app:showAsAction="ifRoom"
-        />
+        android:icon="@drawable/outline_heart_check_24"
+        app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/search"
         android:title="Language"
         android:icon="@drawable/ic_planet"
-        app:showAsAction="ifRoom"
-        />
+        app:showAsAction="ifRoom" />
 
 </menu>

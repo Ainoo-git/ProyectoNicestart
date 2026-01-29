@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import com.example.nicestart.R;
 import com.google.android.material.bottomappbar.BottomAppBar;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -22,23 +23,23 @@ public class MainBab extends AppCompatActivity {
         setContentView(R.layout.activity_main_bab);
 
         BottomAppBar bottomAppBar = findViewById(R.id.bottom_app_bar);
-        FloatingActionButton fab = findViewById(R.id.floating_action_button);
+        FloatingActionButton fab = findViewById(R.id.fab);
 
-        // FAB
+        // FAB (+)
         fab.setOnClickListener(v ->
                 Toast.makeText(this, "FAB Clicked", Toast.LENGTH_SHORT).show()
         );
 
-        // Hamburguesa → BottomSheet
+        // Hamburguesa
         bottomAppBar.setNavigationOnClickListener(v -> showBottomSheetDialog());
 
-        // Menú del BottomAppBar
+        // Menú BottomAppBar
         bottomAppBar.setOnMenuItemClickListener(item -> {
             if (item.getItemId() == R.id.heart) {
                 Toast.makeText(this, "Added to favourites", Toast.LENGTH_SHORT).show();
                 return true;
             } else if (item.getItemId() == R.id.search) {
-                Toast.makeText(this, "Beginning search", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Language clicked", Toast.LENGTH_SHORT).show();
                 return true;
             }
             return false;
