@@ -40,7 +40,8 @@ Aplicación móvil, creada con Android Studio usando Material Components, Constr
 | Icono app |<img width="314" height="75" alt="image" src="https://github.com/user-attachments/assets/f5d113f6-c05f-4685-9004-3d4c1bd00b9c" /> | icono de la aplicación |
 | Login | <img width="356" height="636" alt="Captura de pantalla 2025-12-08 133550" src="https://github.com/user-attachments/assets/85d98e3a-d0fd-475a-a11f-067378910b1f"/> | Login con campos y botones de navegación |
 | Registro (Signup) |<img width="360" height="641" alt="Captura de pantalla 2025-12-08 133638" src="https://github.com/user-attachments/assets/e8bce2c0-d00d-4620-9728-0f355fefa935" />| Registro de usuario con Username, Password y Email |
-| Perfil de Usuario | ![Profile](https://github.com/user-attachments/assets/680d08b4-7aea-4a6b-9f51-3964e444b5dc) | Visualización de avatar, nombre y descripción |
+| Perfil de Usuario |<img width="367" height="656" alt="image" src="https://github.com/user-attachments/assets/ba344ca9-b362-4bf9-bd38-bce877766dbb" />
+| Visualización de avatar, nombre y descripción |
 | MainActivity |<img width="353" height="643" alt="Captura de pantalla 2025-12-08 134054" src="https://github.com/user-attachments/assets/5effe96c-d212-4728-af78-89c556d17ebb" />| WebView con SwipeRefreshLayout y menú contextual |
 |BottomAppBar |<img width="275" height="486" alt="image" src="https://github.com/user-attachments/assets/5d1c2019-27aa-4fbc-98b0-18ca03d71e51" />|SwipeRefreshLayout con WebView y BottomAppBar|
 
