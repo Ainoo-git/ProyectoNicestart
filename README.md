@@ -95,6 +95,10 @@ Aplicación móvil, creada con Android Studio usando Material Components, Constr
 - Interacción con el contenido: 
 ---
 
+###  3.8 Funcionalidades Adicionales
+- Se ha añadido un sistema de persistencia de sesión utilizando SharedPreferences, que permite que el usuario no tenga que iniciar sesión cada vez que abre la aplicación.
+- Una vez que el usuario se autentica correctamente, la sesión queda guardada y la app accede directamente a la pantalla principal mientras no se cierre sesión manualmente.
+
 ##  4. Estructura del Proyecto
 
 ```
